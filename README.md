@@ -23,20 +23,12 @@ Users should be able to:
 
 ### Screenshot
 
-![](./screenshot.jpg)
-
-Add a screenshot of your solution. The easiest way to do this is to use Firefox to view your project, right-click the page and select "Take a Screenshot". You can choose either a full-height screenshot or a cropped one based on how long the page is. If it's very long, it might be best to crop it.
-
-Alternatively, you can use a tool like [FireShot](https://getfireshot.com/) to take the screenshot. FireShot has a free option, so you don't need to purchase it.
-
-Then crop/optimize/edit your image however you like, add it to your project, and update the file path in the image above.
-
-**Note: Delete this note and the paragraphs above when you add your screenshot. If you prefer not to add a screenshot, feel free to remove this entire section.**
+![Screenshot](./images/screenshots/Screenshot%202025-09-16%20at%204.59.56 PM.png)
 
 ### Links
 
-- Solution URL: [GitHub Repo](https://your-solution-url.com)
-- Live Site URL: [Live](https://your-live-site-url.com)
+- Solution URL: [GitHub Repo](https://github.com/ajkendal/blog-preview-card)
+- Live Site URL: [Live](https://ajkendal.github.io/blog-preview-card)
 - Frontend Mentor Submission URL: [Frontend Mentor]()
 
 ## My process
@@ -51,29 +43,39 @@ Then crop/optimize/edit your image however you like, add it to your project, and
 
 ### What I learned
 
-Use this section to recap over some of your major learnings while working through this project. Writing these out and providing code samples of areas you want to highlight is a great way to reinforce your own knowledge.
+While building this project, I deepened my understanding of modern CSS techniques and accessibility best practices. I learned how to leverage CSS custom properties for consistent theming, use CSS Grid for flexible layouts, and ensure my markup is accessible to all users.
 
-To see how you can add code snippets, see below:
-
-```html
-<h1>Some HTML code I'm proud of</h1>
-```
+For example, I used CSS variables to keep my color palette and spacing consistent:
 
 ```css
-.proud-of-this-css {
-  color: papayawhip;
+:root {
+  --clr-yellow: hsl(47, 88%, 63%);
+  --spacing-300: 1.5rem;
+}
+
+.token {
+  background-color: var(--clr-yellow);
+  padding: var(--spacing-300);
 }
 ```
 
-```js
-const proudOfThisFunc = () => {
-  console.log('🎉')
+I also used CSS Grid to center the card and create a responsive layout:
+
+```css
+body {
+  display: grid;
+  place-items: center;
+  grid-template-columns: 2fr 327px 2fr;
 }
 ```
 
-If you want more help with writing markdown, we'd recommend checking out [The Markdown Guide](https://www.markdownguide.org/) to learn more.
+To improve accessibility, I paid attention to heading order, used descriptive alt text, and added ARIA roles:
 
-**Note: Delete this note and the content within this section and replace with your own learnings.**
+```html
+<main class="card" role="main" aria-label="Blog preview card">
+  <!-- content -->
+</main>
+```
 
 ## Author
 

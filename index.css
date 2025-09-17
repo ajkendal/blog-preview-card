@@ -1,0 +1,161 @@
+@import url('https://fonts.googleapis.com/css2?family=Figtree:wght@500;800&display=swap');
+
+:root {
+  --clr-yellow: hsl(47, 88%, 63%);
+  --clr-gray-950: hsl(0, 0%, 7%);
+  --clr-gray-500: hsl(0, 0%, 42%);
+  --clr-white: hsl(0, 0%, 100%);
+
+  --ff-sans: 'Figtree', sans-serif;
+
+  --spacing-300: 1.5rem;
+  --spacing-150: 0.75rem;
+  --spacing-100: 0.5rem;
+  --spacing--50: 0.25rem;
+
+  --screen-mobile: 23.438em;
+  --screen-desktop: 90em;
+}
+
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+}
+
+html {
+  -moz-text-size-adjust: none;
+  -webkit-text-size-adjust: none;
+  text-size-adjust: none;
+}
+
+body,
+h1,
+h2,
+h3,
+h4,
+p,
+figure,
+blockquote,
+dl,
+dd {
+  margin: 0;
+}
+
+body {
+  min-height: 100vh;
+  display: grid;
+  font-family: var(--ff-sans);
+  background-color: var(--clr-yellow);
+  grid-template-columns: 2fr 327px 2fr;
+  grid-template-areas: '. card .';
+
+  place-items: center;
+}
+
+@media (min-width: 90em) {
+  body {
+    grid-template-columns: 2fr 384px 2fr;
+  }
+}
+
+img,
+picture {
+  max-width: 100%;
+  display: block;
+}
+
+input,
+button,
+textarea,
+select {
+  font-family: inherit;
+  font-size: inherit;
+}
+
+:target {
+  scroll-margin-block: 5ex;
+}
+
+.text-preset-1 {
+  font-size: 1.5rem;
+  line-height: 150%;
+  letter-spacing: 0;
+  font-weight: 800;
+}
+
+.text-preset-2 {
+  font-size: 1rem;
+  line-height: 150%;
+  font-weight: 500;
+  letter-spacing: 0;
+}
+
+.text-preset-3 {
+  font-size: 0.875rem;
+  line-height: 150%;
+  font-weight: 500;
+  letter-spacing: 0;
+}
+
+.text-preset-3-bold {
+  font-size: 0.875rem;
+  line-height: 150%;
+  font-weight: 800;
+  letter-spacing: 0;
+}
+
+.card {
+  grid-area: card;
+  display: grid;
+  gap: var(--spacing-300);
+  align-self: center;
+  justify-self: center;
+  background-color: var(--clr-white);
+  border-radius: 20px;
+  padding: var(--spacing-300);
+  box-shadow: 8px 8px 0px 0px #000000;
+  max-width: 380px;
+}
+
+#illustration-article {
+  border-radius: 10px;
+  width: 100%;
+}
+
+.text-area {
+  display: grid;
+  gap: var(--spacing-150);
+}
+
+.token {
+  background-color: var(--clr-yellow);
+  width: fit-content;
+  padding: var(--spacing--50) var(--spacing-150);
+  border-radius: 4px;
+}
+
+.card-text {
+  color: var(--clr-gray-500);
+}
+
+.title {
+  cursor: pointer;
+}
+
+.title:hover {
+  color: var(--clr-yellow);
+}
+
+.author {
+  display: grid;
+  grid-auto-flow: column;
+  align-items: center;
+  justify-content: start;
+  gap: var(--spacing-100);
+}
+
+#image-avatar {
+  width: 32px;
+  height: 32px;
+}

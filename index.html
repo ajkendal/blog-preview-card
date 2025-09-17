@@ -14,18 +14,36 @@
 
     <title>Frontend Mentor | Blog preview card</title>
 
-    <link rel="stylesheet" href="styles.css" />
+    <link rel="stylesheet" href="index.css" />
   </head>
   <body>
-    Learning Published 21 Dec 2023 HTML & CSS foundations These languages are
-    the backbone of every website, defining structure, content, and
-    presentation. Greg Hooper
+    <main class="card" aria-label="Blog preview card">
+      <img
+        id="illustration-article"
+        src="./images/illustration-article.svg"
+        alt="drawers"
+      />
 
-    <div class="attribution">
-      Challenge by
-      <a href="https://www.frontendmentor.io?ref=challenge" target="_blank"
-        >Frontend Mentor</a
-      >. Coded by <a href="#">Your Name Here</a>.
-    </div>
+      <div class="text-area">
+        <h2 class="text-preset-3-bold token">Learning</h2>
+        <p class="text-preset-3 date">Published 21 Dec 2023</p>
+
+        <h1 class="text-preset-1 title">HTML &amp; CSS foundations</h1>
+
+        <p class="text-preset-2 card-text">
+          These languages are the backbone of every website, defining structure,
+          content, and presentation.
+        </p>
+      </div>
+
+      <div class="author" role="contentinfo" aria-label="Author information">
+        <img
+          id="image-avatar"
+          src="./images/image-avatar.webp"
+          alt="Portrait of Greg Hooper"
+        />
+        <h4 class="text-preset-3-bold">Greg Hooper</h4>
+      </div>
+    </main>
   </body>
 </html>
