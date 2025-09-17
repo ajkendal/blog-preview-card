@@ -29,7 +29,7 @@ Users should be able to:
 
 - Solution URL: [GitHub Repo](https://github.com/ajkendal/blog-preview-card)
 - Live Site URL: [Live](https://ajkendal.github.io/blog-preview-card)
-- Frontend Mentor Submission URL: [Frontend Mentor]()
+- Frontend Mentor Submission URL: [Frontend Mentor](http://frontendmentor.io/solutions/blog-preview-card-with-hover-state-KT3l1clH-I)
 
 ## My process
 
